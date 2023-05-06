@@ -9,7 +9,7 @@ interface Props {
 const PrivateAuthRoute = ({ children }: Props) => {
   const { currentUser } = useContext(AuthContext);
 
-  if (currentUser) return <Navigate to="/app" />;
+  if (currentUser) return <Navigate to="/" />;
 
   return <>{children}</>;
 };
