@@ -105,7 +105,7 @@ const Input = () => {
         </label>
 
         <button
-          onClick={() => handleSend}
+          onClick={handleSend}
           className="py-2 px-4 mr-4 rounded-sm text-white bg-[#8da4f1]"
         >
           Send
