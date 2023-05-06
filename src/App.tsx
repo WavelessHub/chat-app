@@ -1,7 +1,7 @@
-import { Navigate } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  return <Navigate to="/app" />;
+  <Home />;
 }
 
 export default App;

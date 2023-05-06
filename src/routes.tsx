@@ -6,23 +6,17 @@ import Register from "./pages/Authentication/Register";
 import Login from "./pages/Authentication/Login";
 import Page404 from "./pages/Error/Page404";
 import Home from "./pages/Home";
-import App from "./App";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <PrivateHomeRoute>
+        <Home />
+      </PrivateHomeRoute>
+    ),
     errorElement: <Page404 />,
     children: [
-      {
-        path: "app",
-        index: true,
-        element: (
-          <PrivateHomeRoute>
-            <Home />
-          </PrivateHomeRoute>
-        ),
-      },
       {
         path: "chats/:currentUserId/:userId",
         element: (
