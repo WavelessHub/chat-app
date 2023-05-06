@@ -25,23 +25,23 @@ const router = createBrowserRouter([
           </PrivateHomeRoute>
         ),
       },
-      {
-        path: "login",
-        element: (
-          <PrivateAuthRoute>
-            <Login />
-          </PrivateAuthRoute>
-        ),
-      },
-      {
-        path: "register",
-        element: (
-          <PrivateAuthRoute>
-            <Register />
-          </PrivateAuthRoute>
-        ),
-      },
     ],
+  },
+  {
+    path: "login",
+    element: (
+      <PrivateAuthRoute>
+        <Login />
+      </PrivateAuthRoute>
+    ),
+  },
+  {
+    path: "register",
+    element: (
+      <PrivateAuthRoute>
+        <Register />
+      </PrivateAuthRoute>
+    ),
   },
 ]);
 
