@@ -1,6 +1,6 @@
 import { ReactNode, useContext, useReducer } from "react";
-import { AuthContext } from "./AuthContext";
-import { ChatContext, ChatType, UserState } from "./ChatContext";
+import { AuthContext } from "../AuthContext";
+import { ChatContext, ChatType, UserState } from "../ChatContext";
 
 interface Props {
   children: ReactNode;

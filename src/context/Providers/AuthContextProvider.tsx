@@ -1,7 +1,7 @@
 import { User, onAuthStateChanged } from "firebase/auth";
 import { ReactNode, useState, useEffect } from "react";
-import { auth } from "../database/firebase";
-import { AuthContext } from "./AuthContext";
+import { auth } from "../../database/firebase";
+import { AuthContext } from "../AuthContext";
 
 interface Props {
   children: ReactNode;
