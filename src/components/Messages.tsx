@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Message from "./Message";
 import { ChatContext } from "../context/ChatContext";
 import { doc, onSnapshot } from "firebase/firestore";
@@ -26,7 +26,7 @@ const Messages = () => {
   }, [data.chatId, currentUserId, userId]);
 
   return (
-    <div className="messages bg-[#ddddf7] px-[20px] py-[20px]">
+    <div className="messages bg-[#ddddf7] px-[20px] py-[20px] overflow-y-scroll">
       {currentUserId &&
         userId &&
         messages.map((m: any) => (

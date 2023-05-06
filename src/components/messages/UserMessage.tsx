@@ -1,4 +1,5 @@
 import { User } from "firebase/auth";
+import { useRef, MutableRefObject, useEffect } from "react";
 
 interface Props {
   user: User;
@@ -6,8 +7,14 @@ interface Props {
 }
 
 const UserMessage = ({ user, message }: Props) => {
+  const ref = useRef() as MutableRefObject<any>;
+
+  useEffect(() => {
+    ref.current.scrollIntoView({ behaviour: "smooth" });
+  }, []);
+
   return (
-    <div className="flex items-start gap-3 mb-3 flex-row-reverse">
+    <div ref={ref} className="flex items-start gap-3 mb-3 flex-row-reverse">
       <div>
         <img
           className="h-10 w-10 rounded-full object-cover object-center"
